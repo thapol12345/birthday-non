@@ -1,78 +1,25 @@
-body {
-  margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  font-family: Tahoma;
-  color: #f1f1f1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-h1 {
-  font-size: 48px;
-  letter-spacing: 2px;
-  animation: glow 2s infinite alternate;
-}
+<body>
 
-#sub {
-  font-size: 20px;
-  opacity: 0.9;
-}
+  <h1 id="typing"></h1>
+  <p id="sub">สุขสันต์วันเกิดนะเพื่อนนนท์ 🎉</p>
 
-#message {
-  display: none;
-  font-size: 18px;
-  margin-top: 10px;
-  opacity: 0.95;
-}
+  <button onclick="surprise()">🎁 กดดูสิเพื่อน</button>
 
-button {
-  margin: 18px;
-  padding: 12px 30px;
-  font-size: 17px;
-  border-radius: 30px;
-  border: none;
-  background: #1f6feb;
-  color: white;
-  cursor: pointer;
-}
+  <p id="message">
+    ขอให้ปีนี้เป็นปีที่ดี ประสบความสำเร็จทุกอย่าง
+  </p>
 
-button:hover {
-  background: #388bfd;
-}
+  <canvas id="confetti"></canvas>
+  <div id="balloons"></div>
 
-/* Glow แบบเท่ */
-@keyframes glow {
-  from { text-shadow: 0 0 8px #4facfe; }
-  to { text-shadow: 0 0 22px #00f2fe; }
-}
-
-/* Confetti */
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-/* Balloons */
-.balloon {
-  position: absolute;
-  bottom: -120px;
-  font-size: 36px;
-  opacity: 0.85;
-  animation: floatUp linear infinite;
-}
-
-@keyframes floatUp {
-  from {
-    transform: translateY(0) translateX(0) rotate(0deg);
-  }
-  to {
-    transform: translateY(-130vh) translateX(60px) rotate(10deg);
-  }
-}
+  <script src="script.js"></script>
+</body>
+</html>
